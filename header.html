@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/responsive.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link href="https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=STIX+Two+Text&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Texturina&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="UTF-8">
+        <style>
+            body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+            body, html {
+                height: 100%;
+                line-height: 1.8;}  
+                .input-container {
+            display: -ms-flexbox;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: flex-end;}
+            
+               
+               .centered-div {
+                display: flex;
+                align-items: center;
+                justify-content: center;}
+                
+               .centered-div a.active {
+                  background-color: #ddd;
+                  color: #fff;
+                }
+
+                ul {
+                  display: flex;
+                  justify-content: space-around;
+                  list-style-type: none;
+}
+            
+            @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+        </style>
+        <title>Sto. Rosario Multispecialty Clinic</title>
+    </head>
+    <body>
+        <!-- Navbar (sit on top) -->
+        <div>
+            <div class="w3-bar  w3-darkred w3-card" id="myNavbar">
+                <div class="w3-bar w3-white">
+                    <a href="index.php" class="w3-left w3-bar-item w3-button w3-wide w3-hide-small"><img src="./images/v62_1412.png" width="110" height="100" alt="Logo">
+                    <span class="w3-large w3-hide-small" style="font-family: Texturina; color:#A3001C; font-size: 30;"><b><i>"Nurturing Health, Empowering Lives"</i></b></span>
+                    </a>
+                        <div class="w3-right  w3-hide-small centered-div" style="padding-top: 40px; padding-right: 20px;">
+                            <div class="input-container w3-hide-small" style=" border-color: #A3001C; border-style: solid;">
+                              <input type="text"  class="w3-input w3-hide-small" placeholder="Search">
+                              <a href="#"><i class="fa fa-fw fa-search w3-medium" style="color: #A3001C;"></i></a>
+                            </div>
+                        </div>
+                </div>
+                <!-- Right-sided navbar links -->    
+                <div class="centered-div w3-hide-small" style=" font-family: Stoke; font-size:x-large;">
+                  <div class="w3-bar">
+                    <ul>
+                      <li><a href="index.php" class="tablink w3-bar-item w3-button"><i class="fa fa-home"></i> Home</a></li>
+                      <li><a href="Doctors.php" class="tablink w3-bar-item w3-button"><i class="fa fa-user-md"></i> Our Doctors</a></li>
+                      <li><a href="Services.php" class="tablink w3-bar-item w3-button"><i class="fa fa-th"></i> Services</a></li>
+                      <li><a href="AboutUs.php" class="tablink w3-bar-item w3-button"><i class="fa fa-exclamation-circle"></i> About Us</a></li>
+                      <li><a href="Login.php" class="tablink w3-bar-item w3-button"><i class="fa fa-user"></i> Login</a></li>
+                    </ul>
+                </div>
+                <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+                <span class="w3-left w3-bar-item w3-xlarge w3-hide-large w3-hide-medium" style="font-family: Arial, Helvetica, sans-serif;">Sto. Rosario Multispecialty Clinic</span>
+                <a href="javascript:void(0)" class="w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+                <i class="fa fa-bars w3-large w3-bar-item "></i>
+                </a>
+            </div>
+        </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="w3-sidebar w3-bar-block w3-darkred w3-card w3-animate-right w3-display-right w3-hide-medium w3-hide-large" style="display:none;" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-meduim w3-padding-16">X</a>
+    <a href="UserLogin.php" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Login</a>
+    <a href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i> Search</a>
+    <a href="index.php" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-home"></i> Home</a>
+    <a href="Doctors.php" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-user-md"></i> Our Doctors</a>
+    <a href="Services.php" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Services</a>
+    <a href="AboutUs.php" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-exclamation-circle"></i> About Us</a>
+    </nav>
+
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+          document.getElementById("img01").src = element.src;
+          document.getElementById("modal01").style.display = "block";
+          var captionText = document.getElementById("caption");
+          captionText.innerHTML = element.alt;
+        }
+        
+        // Toggle between showing and hiding the sidebar when clicking the menu icon
+        var mySidebar = document.getElementById("mySidebar");
+        
+        function w3_open() {
+          if (mySidebar.style.display === 'block') {
+            mySidebar.style.display = 'none';
+          } else {
+            mySidebar.style.display = 'block';
+          }
+        }
+        
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+        }
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+// Get all tab links
+  var tablinks = document.querySelectorAll(".tablink");
+
+  // Add click event listeners to each tab link
+  tablinks.forEach(function(tablink) {
+    tablink.addEventListener("click", function() {
+      // Remove active class from all tab links
+      tablinks.forEach(function(link) {
+        link.classList.remove("active");
+      });
+
+      // Add active class to the clicked tab link
+      tablink.classList.add("active");
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+client id: 977638555369-393ep2isr4sbuneeotheddhp551poatg.apps.googleusercontent.com
+client secret: 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
+redirect url: http://localhost/astoveza/SRMC-20230907T110156Z-001/SRMC/Login.php
+
